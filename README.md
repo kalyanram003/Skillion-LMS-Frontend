@@ -59,7 +59,7 @@ src/
 
 - Node.js (v14 or higher)
 - npm or yarn
-- Backend API running on http://localhost:8090
+- Backend API running on [http://localhost:8090](https://skillion-lms-backend.onrender.com)
 
 ### Installation
 
