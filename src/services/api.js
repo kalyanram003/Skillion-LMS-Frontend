@@ -1,6 +1,9 @@
 import axios from 'axios';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8090/api';
+// Prefer REACT_APP_API_BASE_URL; fallback to legacy REACT_APP_API_URL
+const rawBase = process.env.REACT_APP_API_BASE_URL || process.env.REACT_APP_API_URL || 'http://localhost:8090';
+// Ensure we append "/api" exactly once
+const API_BASE_URL = `${rawBase.replace(/\/$/, '')}/api`;
 
 // Create axios instance with default config
 const api = axios.create({
